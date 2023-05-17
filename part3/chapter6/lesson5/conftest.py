@@ -1,17 +1,17 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
-
-import pytest
-from selenium import webdriver
 
 def pytest_addoption(parser):
-    parser.addoption("--browser_name", action="store", default="chrome",
-                     help="Choose browser: chrome or firefox")
+    parser.addoption(
+        "--browser_name",
+        action="store",
+        default="chrome",
+        help="Choose browser: chrome or firefox",
+    )
 
 
 @pytest.fixture(scope="class")

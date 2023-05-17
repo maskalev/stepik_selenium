@@ -1,6 +1,7 @@
 import math
-from pathlib import Path
 import time
+from pathlib import Path
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
