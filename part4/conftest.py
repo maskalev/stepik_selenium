@@ -30,11 +30,9 @@ def browser(request: pytest.FixtureRequest) -> Generator[webdriver.Chrome, None,
 
 @pytest.fixture
 def login(browser: webdriver.Chrome) -> None:
-    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
-    page = ProductPage(browser, link)
-    page.open()
-    page.go_to_login_page()
-    login_page = LoginPage(browser, browser.current_url)
+    link = "http://selenium1py.pythonanywhere.com/accounts/login/"
+    login_page = LoginPage(browser, link)
+    login_page.open()
     email = str(time.time()) + "@fakemail.org"
     password = str(time.time())
     login_page.register_new_user(email, password)

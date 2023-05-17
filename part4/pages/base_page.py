@@ -17,7 +17,6 @@ class BasePage:
     def __init__(self, browser: webdriver.Chrome, url: str, timeout: int = 5) -> None:
         self.browser = browser
         self.url = url
-        self.timeout = timeout
         self.browser.implicitly_wait(timeout)
 
     def open(self) -> None:
